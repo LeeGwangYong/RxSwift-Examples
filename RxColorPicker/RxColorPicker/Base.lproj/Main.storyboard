@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5I1-Kt-o6G">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="CwJ-3T-Mon">
+            <objects>
+                <viewController id="5I1-Kt-o6G" customClass="ViewController" customModule="RxSwift_Study_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r95-0z-Tfw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpI-g1-NFZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="v16-DL-Uzx">
+                                <rect key="frame" x="20" y="353.5" width="335" height="313.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1f-bh-3Yf">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="78.5"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pog-Vq-pma">
+                                        <rect key="frame" x="-2" y="78.5" width="339" height="79.5"/>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ESi-bX-ee6">
+                                        <rect key="frame" x="-2" y="157" width="339" height="79"/>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ma1-5g-M6H">
+                                        <rect key="frame" x="-2" y="235" width="339" height="79.5"/>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ESi-bX-ee6" firstAttribute="centerX" secondItem="v16-DL-Uzx" secondAttribute="centerX" id="9SX-sj-Ikd"/>
+                                    <constraint firstItem="ma1-5g-M6H" firstAttribute="centerX" secondItem="v16-DL-Uzx" secondAttribute="centerX" id="Shh-0Z-yD9"/>
+                                    <constraint firstItem="pog-Vq-pma" firstAttribute="centerX" secondItem="v16-DL-Uzx" secondAttribute="centerX" id="iw1-aD-749"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GpI-g1-NFZ" firstAttribute="height" secondItem="r95-0z-Tfw" secondAttribute="height" multiplier="0.5" id="BL1-co-Uwc"/>
+                            <constraint firstItem="v16-DL-Uzx" firstAttribute="top" secondItem="GpI-g1-NFZ" secondAttribute="bottom" id="EtN-px-jTR"/>
+                            <constraint firstItem="t84-py-ASC" firstAttribute="trailing" secondItem="GpI-g1-NFZ" secondAttribute="trailing" id="HdH-ks-n0X"/>
+                            <constraint firstItem="GpI-g1-NFZ" firstAttribute="top" secondItem="t84-py-ASC" secondAttribute="top" id="M0e-kZ-CCr"/>
+                            <constraint firstItem="t84-py-ASC" firstAttribute="trailing" secondItem="v16-DL-Uzx" secondAttribute="trailing" constant="20" id="XFa-oF-IMC"/>
+                            <constraint firstItem="GpI-g1-NFZ" firstAttribute="leading" secondItem="t84-py-ASC" secondAttribute="leading" id="cuJ-7k-m55"/>
+                            <constraint firstItem="v16-DL-Uzx" firstAttribute="leading" secondItem="t84-py-ASC" secondAttribute="leading" constant="20" id="pwb-c3-47B"/>
+                            <constraint firstItem="t84-py-ASC" firstAttribute="bottom" secondItem="v16-DL-Uzx" secondAttribute="bottom" id="pyM-Ig-K14"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t84-py-ASC"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="ma1-5g-M6H" id="lGb-Yy-ySX"/>
+                        <outlet property="button" destination="Z1f-bh-3Yf" id="jus-QI-k3N"/>
+                        <outlet property="colorView" destination="GpI-g1-NFZ" id="l1f-sv-xNd"/>
+                        <outlet property="greenSlider" destination="ESi-bX-ee6" id="onU-UJ-w1m"/>
+                        <outlet property="redSlider" destination="pog-Vq-pma" id="IfI-zH-62u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RKg-VT-To8" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
