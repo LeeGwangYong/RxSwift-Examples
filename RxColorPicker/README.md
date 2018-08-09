@@ -27,4 +27,4 @@ extension Reactive where Base: ViewController {
 }
 ```
 
-![2018-08-09 12_43_15](https://ws2.sinaimg.cn/large/0069RVTdgy1fu3b5vatopg30ok1784qp.gif){: width="50%" height="50%"}
+![2018-08-09 12_43_15](https://ws2.sinaimg.cn/large/0069RVTdgy1fu3b5vatopg30ok1784qp.gif)
