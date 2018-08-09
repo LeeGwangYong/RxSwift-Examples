@@ -83,6 +83,7 @@ class ViewController: UIViewController {
         self.rx.tapEvent.subscribe(onNext: { _ in
             print("Tapped")
         }).disposed(by: disposeBag)
+        
     }
 }
 
