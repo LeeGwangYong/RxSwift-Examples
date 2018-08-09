@@ -1,6 +1,4 @@
-# Observable, Subscribing, Dispose
-
-#### 1. Observable 
+## Observable
 
 - **An Observable (`ObservableType`) is equivalent to a Sequence.**
 
@@ -18,7 +16,19 @@ protocol ObserverType {
 }
 ```
 
-#### 2. Subscribing
+#### Hot Observable
+
+- 생성되는 시점부터 바로 item을 emit합니다.
+- sequence의 중간부터 observing을 시작할 수 있습니다.
+
+#### Cold Observable
+
+- subscribe되기 전까지는 item을 emit하지 않습니다.(= subscribe되는 시점부터 item을 emit합니다)
+- 처음부터, sequence의 전체를 보는 것이 보장됩니다.
+
+[Hot and Cold Observables](https://github.com/ReactiveX/RxSwift/blob/master/Documentation/HotAndColdObservables.md)
+
+## Subscribing
 
 - `Observable`은 sequence의 정의일 뿐, **subscribing 전에는 subscription closure를 수행하지않습니다.** 
 
@@ -56,7 +66,7 @@ class Observable<Element> {
 }
 ```
 
-#### 3. Dispose
+## Dispose
 
 - subscribe를 취소시키거나, event의 emiting을 중지시킵니다.
 - `DisposeBag`이 deinit될 때, 담겨져 있던 Observable들이 같이 dispose됩니다.
@@ -69,9 +79,9 @@ let disposeBage = DisposeBag()
 .disposed(by: disposeBag)
 ```
 
-# [Subject](http://reactivex.io/documentation/subject.html)
+## [Subject](http://reactivex.io/documentation/subject.html)
 
-Observable이자, Observer입니다.
+**Observable이자, Observer**입니다.
 
 ```swift
 extension ObservableType {

@@ -30,13 +30,6 @@ class ViewController: UIViewController {
     }
     
     func rxInit() {
-        Observable.of(1,2,3).do(onNext: <#T##((Int) throws -> Void)?##((Int) throws -> Void)?##(Int) throws -> Void#>, onError: <#T##((Error) throws -> Void)?##((Error) throws -> Void)?##(Error) throws -> Void#>, onCompleted: <#T##(() throws -> Void)?##(() throws -> Void)?##() throws -> Void#>, onSubscribe: <#T##(() -> ())?##(() -> ())?##() -> ()#>, onSubscribed: <#T##(() -> ())?##(() -> ())?##() -> ()#>, onDispose: <#T##(() -> ())?##(() -> ())?##() -> ()#>)
-        Observable.of(1,2,3,4,5).do(onNext: {
-            print("do onNext : ", $0 * 10) // This has no effect on the actual subscription
-        }).subscribe(onNext:{
-            print("subscribe onNext : ", $0)
-        })
-        
 //--------Slider Color Observable--------
 //        colorObservalbe을 combineLatest operator를 이용하여 Observable<UIColor>로 만들어주었습니다.
 //        Observable이 되었으니 subscribe 또는 binding이 가능합니다.
